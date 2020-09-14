@@ -4,6 +4,13 @@ import content from '../content.json';
 
 export default ({ pageKey, items }) => {
   const { title, intro } = content[pageKey];
+
+  const sortItems = (a, b) => {
+    if (a.datePublished > b.datePublished) return -1;
+    if (b.datePublished > a.datePublished) return 1;
+    return 0;
+  };
+
   return (
     <div>
       <div className="banner" style={{ backgroundImage: 'url(home.jpg)' }}>
@@ -12,7 +19,7 @@ export default ({ pageKey, items }) => {
       <div className="content">
         <p className="intro">{intro}</p>
         <div className="items">
-          {items.map((item) => (
+          {items.sort(sortItems).map((item) => (
             <a
               key={item.itemId}
               href={escape(`/blog/${item.itemName.replace(/ /g, '_').toLowerCase()}`)}
