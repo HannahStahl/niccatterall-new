@@ -119,6 +119,16 @@ code {
   min-width: 251px;
 }
 
+hr {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.clients-header {
+  margin-top: 30px;
+  font-weight: 300;
+}
+
 .blog-preview-container {
   width: 350px;
   height: 500px;
@@ -130,14 +140,14 @@ code {
 
 .client-preview-container {
   width: 300px;
-  height: 330px;
+  height: 320px;
 }
 
-.client-preview-container h3 {
+.client-preview-container h4 {
   margin-top: 20px;
 }
 
-.item h3 {
+.item h3,h4 {
   font-weight: 300;
 }
 

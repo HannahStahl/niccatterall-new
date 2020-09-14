@@ -55,31 +55,90 @@
         "firstName": "Dylan",
         "lastName": "Frittelli",
         "itemPhoto": "dylan-frittelli.png",
-        "itemLink": "https://www.pgatour.com/players/player.29970.dylan-frittelli.htmldylan"
+        "itemLink": "https://www.pgatour.com/players/player.29970.dylan-frittelli.html",
+        "active": true
       },
       {
         "firstName": "Chris",
         "lastName": "Kirk",
         "itemPhoto": "chris-kirk.png",
-        "itemLink": "https://www.pgatour.com/players/player.30926.chris-kirk.html"
+        "itemLink": "https://www.pgatour.com/players/player.30926.chris-kirk.html",
+        "active": true
       },
       {
         "firstName": "Luke",
         "lastName": "List",
         "itemPhoto": "luke-list.png",
-        "itemLink": "https://www.pgatour.com/players/player.27129.luke-list.html"
+        "itemLink": "https://www.pgatour.com/players/player.27129.luke-list.html",
+        "active": true
       },
       {
         "firstName": "D.A.",
         "lastName": "Points",
         "itemPhoto": "da-points.png",
-        "itemLink": "https://www.pgatour.com/players/player.25240.d-a--points.html"
+        "itemLink": "https://www.pgatour.com/players/player.25240.d-a--points.html",
+        "active": true
       },
       {
         "firstName": "Cameron",
         "lastName": "Smith",
         "itemPhoto": "cameron-smith.png",
-        "itemLink": "https://www.pgatour.com/players/player.35891.cameron-smith.html"
+        "itemLink": "https://www.pgatour.com/players/player.35891.cameron-smith.html",
+        "active": true
+      },
+      {
+        "firstName": "Zac",
+        "lastName": "Blair",
+        "itemPhoto": "zac-blair.png",
+        "itemLink": "https://www.pgatour.com/players/player.40058.zac-blair.html"
+      },
+      {
+        "firstName": "Steven",
+        "lastName": "Bowditch",
+        "itemPhoto": "steven-bowditch.png",
+        "itemLink": "https://www.pgatour.com/players/player.25274.steven-bowditch.html"
+      },
+      {
+        "firstName": "Patrick",
+        "lastName": "Cantlay",
+        "itemPhoto": "patrick-cantlay.png",
+        "itemLink": "https://www.pgatour.com/players/player.35450.patrick-cantlay.html"
+      },
+      {
+        "firstName": "Kyoung-Hoon",
+        "lastName": "Lee",
+        "itemPhoto": "kh-lee.png",
+        "itemLink": "https://www.pgatour.com/players/player.32791.kyoung-hoon-lee.html"
+      },
+      {
+        "firstName": "Tom",
+        "lastName": "Lovelady",
+        "itemPhoto": "tom-lovelady.png",
+        "itemLink": "https://www.pgatour.com/players/player.50526.tom-lovelady.html"
+      },
+      {
+        "firstName": "Ben",
+        "lastName": "Martin",
+        "itemPhoto": "ben-martin.png",
+        "itemLink": "https://www.pgatour.com/players/player.33413.ben-martin.html"
+      },
+      {
+        "firstName": "Cameron",
+        "lastName": "Percy",
+        "itemPhoto": "cameron-percy.png",
+        "itemLink": "https://www.pgatour.com/players/player.22056.cameron-percy.html"
+      },
+      {
+        "firstName": "Kyle",
+        "lastName": "Stanley",
+        "itemPhoto": "kyle-stanley.png",
+        "itemLink": "https://www.pgatour.com/players/player.30110.kyle-stanley.html"
+      },
+      {
+        "firstName": "Boo",
+        "lastName": "Weekley",
+        "itemPhoto": "boo-weekley.png",
+        "itemLink": "https://www.pgatour.com/players/player.26289.boo-weekley.html"
       }
     ]
   }
