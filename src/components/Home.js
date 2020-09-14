@@ -3,7 +3,9 @@ import config from '../config';
 import content from '../content.json';
 
 export default ({ pageKey, items }) => {
-  const { title, intro } = content[pageKey];
+  const {
+    title, photo, style, intro,
+  } = content[pageKey];
 
   const sortItems = (a, b) => {
     if (a.datePublished > b.datePublished) return -1;
@@ -13,7 +15,7 @@ export default ({ pageKey, items }) => {
 
   return (
     <div>
-      <div className="banner" style={{ backgroundImage: 'url(home.jpg)' }}>
+      <div className="banner" style={{ backgroundImage: `url(${photo})`, ...(style || {}) }}>
         <div className="banner-text"><h1>{title}</h1></div>
       </div>
       <div className="content">

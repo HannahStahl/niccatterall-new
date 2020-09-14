@@ -1,6 +1,10 @@
 {
   "home": {
     "title": "Nic Catterall Golf",
+    "photo": "https://d2vff3mk7ylu21.cloudfront.net/home.jpg",
+    "style": {
+      "backgroundPosition": "top right"
+    },
     "intro": [
       "Nic Catterall is an Australian high-performance coach, specializing in Musculoskeletal Therapy and Strength & Conditioning for professional golfers on the PGA Tour in the U.S. With over five years of tour experience, plus 10 years of clinical and industry experience across multiple sporting codes, Nic takes a tailored approach to each athlete he works with.",
       "Nic believes in training athletes to be formidable to their core - not just in performance, but in life. By seeking out areas for improvement, enhancing exceptional qualities, and encouraging fluid adaptation, Nic helps his clients succeed in an ever-changing world. He encourages hard and smart work aimed at developing body, brain, and character."
@@ -8,22 +12,33 @@
   },
   "blog": {
     "title": "Blog Articles",
+    "photo": "https://d2vff3mk7ylu21.cloudfront.net/blog-banner.jpg",
+    "style": {
+      "backgroundPosition": "top right"
+    },
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   "programs": {
     "title": "Training Programs",
+    "photo": "https://d2vff3mk7ylu21.cloudfront.net/programs-banner.jpg",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   "videos": {
     "title": "Instructional Videos",
+    "photo": "https://d2vff3mk7ylu21.cloudfront.net/videos-banner.jpg",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   "podcast": {
     "title": "Tour Golf Podcast",
+    "photo": "https://d2vff3mk7ylu21.cloudfront.net/podcast-flipped.jpg",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   "clients": {
     "title": "PGA Client Showcase",
+    "photo": "https://d2vff3mk7ylu21.cloudfront.net/clients-banner.jpg",
+    "style": {
+      "backgroundPosition": "bottom right"
+    },
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }
 }
