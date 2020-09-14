@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter, withRouter, Route, Switch,
 } from 'react-router-dom';
+import moment from 'moment';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Home from './components/Home';
 import Page from './components/Page';
 import Article from './components/Article';
 import NotFound from './components/NotFound';
@@ -14,15 +14,46 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import config from './config';
 
+const getArticles = (items) => {
+  const articles = items.filter((item) => item.cmsPageConfigId === config.blogConfigId);
+  return articles.sort((a, b) => {
+    if (a.datePublished > b.datePublished) return -1;
+    if (b.datePublished > a.datePublished) return 1;
+    return 0;
+  });
+};
+
+const Items = ({ items }) => (
+  <div className="items">
+    {getArticles(items).map((item) => (
+      <a
+        key={item.itemId}
+        href={escape(`/blog/${item.itemName.replace(/ /g, '_').toLowerCase()}`)}
+        className="item"
+      >
+        <img
+          src={`${config.cloudfrontURL}/${item.itemPhotos[0].photoName}`}
+          alt={item.itemName}
+        />
+        <div className="blog-preview">
+          <h3>{item.itemName}</h3>
+          <p>{moment(item.datePublished).format('MMMM D, YYYY')}</p>
+          <div dangerouslySetInnerHTML={{ __html: item.itemHtml }} />
+        </div>
+      </a>
+    ))}
+  </div>
+);
+
 const Routes = ({ items }) => (
   <Switch>
-    <Route path="/" exact render={() => <Home pageKey="home" items={items} />} />
-    <Route path="/blog" exact render={() => <Page pageKey="blog" items={items} />} />
+    <Route path="/" exact render={() => <Page pageKey="home" Items={<Items items={items} />} />} />
+    <Route path="/blog" exact render={() => <Page pageKey="blog" Items={<Items items={items} />} />} />
     <Route path="/blog/:itemName" exact render={(props) => <Article match={props.match} items={items} />} />
-    <Route path="/programs" exact render={() => <Page pageKey="programs" items={items} />} />
-    <Route path="/videos" exact render={() => <Page pageKey="videos" items={items} />} />
-    <Route path="/podcast" exact render={() => <Page pageKey="podcast" items={items} />} />
-    <Route path="/clients" exact render={() => <Page pageKey="clients" items={items} />} />
+    <Route path="/programs" exact render={() => <Page pageKey="programs" Items={<Items items={items} />} />} />
+    <Route path="/videos" exact render={() => <Page pageKey="videos" Items={<Items items={items} />} />} />
+    <Route path="/podcast" exact render={() => <Page pageKey="podcast" Items={<Items items={items} />} />} />
+    <Route path="/clients" exact render={() => <Page pageKey="clients" Items={<Items items={items} />} />} />
     <Route component={NotFound} />
   </Switch>
 );
@@ -32,7 +63,7 @@ const App = withRouter(() => {
 
   useEffect(() => {
     Promise.all([
-      fetch(`${config.apiURL}/publishedItemsOfSpecifiedType/${config.userID}/${config.blogConfigId}`).then((res) => res.json()),
+      fetch(`${config.apiURL}/publishedItems/${config.userID}`).then((res) => res.json()),
       fetch(`${config.apiURL}/itemsToPhotos/${config.userID}`).then((res) => res.json()),
       fetch(`${config.apiURL}/photos/${config.userID}`).then((res) => res.json()),
     ]).then((results) => {
