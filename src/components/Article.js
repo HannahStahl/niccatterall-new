@@ -5,12 +5,12 @@ export default ({ match, items }) => {
   const [item, setItem] = useState(undefined);
 
   useEffect(() => {
-    const itemName = unescape(match.params.itemName).replace(/_/g, ' ');
+    const blogTitle = unescape(match.params.blogTitle).replace(/_/g, ' ');
     const itemDetails = items.find((itemInList) => (
-      itemInList.itemName.toLowerCase() === itemName.toLowerCase()
+      itemInList.itemName.toLowerCase() === blogTitle.toLowerCase()
     ));
     setItem(itemDetails);
-  }, [match.params.itemName, items]);
+  }, [match.params.blogTitle, items]);
 
   return item ? (
     <div className="article">
