@@ -11,7 +11,6 @@ const NavBar = () => (
           { href: '/', label: 'Home' },
           { href: '/blog', label: 'Blog' },
           { href: '/programs', label: 'Programs' },
-          { href: '/videos', label: 'Videos' },
           { href: '/podcast', label: 'Podcast' },
           { href: '/clients', label: 'Clients' },
         ].map(({ href, label }) => (

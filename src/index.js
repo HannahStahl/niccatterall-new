@@ -22,7 +22,6 @@ const Routes = ({ items }) => (
     <Route path="/blog" exact render={() => <Page pageKey="blog" Items={<Articles items={items} />} />} />
     <Route path="/blog/:blogTitle" exact render={(props) => <Article match={props.match} items={items} />} />
     <Route path="/programs" exact render={() => <Page pageKey="programs" Items={<Programs items={items} />} />} />
-    <Route path="/videos" exact render={() => <Page pageKey="videos" Items={<Articles items={items} />} />} />
     <Route path="/podcast" exact render={() => <Page pageKey="podcast" Items={<Articles items={items} />} />} />
     <Route path="/clients" exact render={() => <Page pageKey="clients" Items={<Clients items={items} />} />} />
     <Route component={NotFound} />
