@@ -11,18 +11,20 @@ import Article from './components/Article';
 import NotFound from './components/NotFound';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import Home from './components/Home';
 import Articles from './components/Articles';
 import Programs from './components/Programs';
+import Podcast from './components/Podcast';
 import Clients from './components/Clients';
 import config from './config';
 
 const Routes = ({ items }) => (
   <Switch>
-    <Route path="/" exact render={() => <Page pageKey="home" Items={<Articles items={items} />} />} />
+    <Route path="/" exact render={() => <Page pageKey="home" Items={<Home items={items} />} />} />
     <Route path="/blog" exact render={() => <Page pageKey="blog" Items={<Articles items={items} />} />} />
     <Route path="/blog/:blogTitle" exact render={(props) => <Article match={props.match} items={items} />} />
     <Route path="/programs" exact render={() => <Page pageKey="programs" Items={<Programs items={items} />} />} />
-    <Route path="/podcast" exact render={() => <Page pageKey="podcast" Items={<Articles items={items} />} />} />
+    <Route path="/podcast" exact render={() => <Page pageKey="podcast" Items={<Podcast items={items} />} />} />
     <Route path="/clients" exact render={() => <Page pageKey="clients" Items={<Clients items={items} />} />} />
     <Route component={NotFound} />
   </Switch>
