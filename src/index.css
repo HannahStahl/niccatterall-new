@@ -116,6 +116,7 @@ code {
   border-left: none;
   box-shadow: -5px 5px 5px 0px #ddd;
   color: black;
+  min-width: 251px;
 }
 
 .blog-preview-container {
@@ -217,6 +218,10 @@ code {
 }
 
 @media all and (max-width: 661px) {
+  h1 {
+    font-size: 2rem;
+  }
+
   .program-preview-container {
     width: 251px;
   }
