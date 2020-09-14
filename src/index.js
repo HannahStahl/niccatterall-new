@@ -7,41 +7,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Home from './components/Home';
-import About from './components/About';
-import Items from './components/Items';
-import Item from './components/Item';
-import Contact from './components/Contact';
-import Cart from './components/Cart';
+import Page from './components/Page';
+import Article from './components/Article';
 import NotFound from './components/NotFound';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import config from './config';
 
-const Routes = ({ items, cart, updateCart }) => (
+const Routes = ({ items }) => (
   <Switch>
-    <Route path="/" exact component={Home} />
-    <Route path="/about" exact component={About} />
-    <Route path="/items" exact render={() => <Items items={items} />} />
-    <Route path="/items/:itemName" exact render={(props) => <Item match={props.match} items={items} updateCart={updateCart} />} />
-    <Route path="/contact" exact component={Contact} />
-    <Route path="/cart" exact render={() => <Cart items={items} cart={cart} updateCart={updateCart} />} />
+    <Route path="/" exact render={() => <Home pageKey="home" items={items} />} />
+    <Route path="/blog" exact render={() => <Page pageKey="blog" items={items} />} />
+    <Route path="/blog/:itemName" exact render={(props) => <Article match={props.match} items={items} />} />
+    <Route path="/programs" exact render={() => <Page pageKey="programs" items={items} />} />
+    <Route path="/videos" exact render={() => <Page pageKey="videos" items={items} />} />
+    <Route path="/podcast" exact render={() => <Page pageKey="podcast" items={items} />} />
+    <Route path="/clients" exact render={() => <Page pageKey="clients" items={items} />} />
     <Route component={NotFound} />
   </Switch>
 );
 
 const App = withRouter(() => {
   const [items, setItems] = useState([]);
-  const [cart, setCart] = useState([]);
-
-  const updateCart = (newCart) => {
-    if (newCart) localStorage.setItem('cart', JSON.stringify(newCart));
-    const cartStr = localStorage.getItem('cart');
-    setCart(cartStr ? JSON.parse(cartStr) : []);
-  };
 
   useEffect(() => {
     Promise.all([
-      fetch(`${config.apiURL}/publishedItems/${config.userID}`).then((res) => res.json()),
+      fetch(`${config.apiURL}/publishedItemsOfSpecifiedType/${config.userID}/${config.blogConfigId}`).then((res) => res.json()),
       fetch(`${config.apiURL}/itemsToPhotos/${config.userID}`).then((res) => res.json()),
       fetch(`${config.apiURL}/photos/${config.userID}`).then((res) => res.json()),
     ]).then((results) => {
@@ -56,16 +47,15 @@ const App = withRouter(() => {
       });
       setItems(itemsList);
     });
-    updateCart();
   }, []);
 
   return (
     <>
-      <NavBar cart={cart} />
+      <NavBar />
       <div className="page-content">
-        <Routes items={items} cart={cart} updateCart={updateCart} />
+        <Routes items={items} />
       </div>
-      {window.location.pathname !== '/' && <Footer />}
+      <Footer />
     </>
   );
 });

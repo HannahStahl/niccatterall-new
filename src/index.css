@@ -8,10 +8,14 @@ html, body, #root {
 
 body {
   margin: 0;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+p {
+  text-align: left;
 }
 
 code {
@@ -19,11 +23,31 @@ code {
     monospace;
 }
 
+.navbar {
+  background-color: white;
+  border-bottom: solid 1px #eee;
+}
+
+.navbar-nav.ml-auto {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar-nav.ml-auto .nav-link {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
 .page-content {
-  padding: 5%;
-  padding-top: 7%;
-  min-height: calc(100% - 56px);
+  padding-top: 50px;
+  padding-bottom: 5%;
+  min-height: 100%;
   margin-bottom: -80px;
+  background-color: white;
 }
 
 .page-content:after {
@@ -32,14 +56,40 @@ code {
   height: 80px;
 }
 
-.home-page-image {
-  position: fixed;
-  top: 0;
-  left: 0;
+.banner {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: max(3%, 30px);
+}
+
+.banner-text {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+}
+
+.content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.intro {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: max(3%, 30px);
 }
 
 .items {
@@ -63,14 +113,17 @@ code {
   color: black;
 }
 
-.item-img {
+.item h3 {
+  z-index: 1;
+}
+
+.item img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
 
 .footer {
@@ -91,141 +144,11 @@ code {
   text-decoration: underline;
 }
 
-.cart-icon-container {
-  position: relative;
-  width: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.active > .cart-icon-container .cart-icon {
-  stroke: rgba(0, 0, 0, 0.9);
-}
-
-.cart-number {
-  background-color: #e51b23;
-  font-size: 11px;
-  color: white;
-  border-radius: 50%;
-  padding: 3px;
-  position: absolute;
-  top: -7px;
-  right: -10px;
-  min-width: 20px;
-  height: 20px;
-}
-
-.cart-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cart-item-name {
-  margin-bottom: 0px;
-  margin-right: 10px;
-}
-
-.cart-item-quantity {
-  width: 75px;
-}
-
-.checkout-form .card-field {
-  margin-bottom: 15px;
-  background-color: white;
-  padding: 11px 16px;
-  border-radius: 6px;
-  border: 1px solid #CCC;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-  line-height: 1.3333333;
-}
-
-.checkout-form-container {
-  padding-top: 30px;
-}
-
-.checkout-form .card-field.StripeElement--focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-  border-color: #80bdff;
-}
-
-.checkout-form .form-row {
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  border: solid 1px #ced4da;
-}
-
-.checkout-form .form-row * {
-  margin-bottom: 0;
-}
-
-.checkout-form .form-row.focused {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-  border-color: #80bdff;
-}
-
-.checkout-form .form-row.focused * .form-control {
-  box-shadow: none;
-  border-color: transparent;
-}
-
-.checkout-form .city-input {
-  width: 50%;
-}
-
-.checkout-form .address-line-2 .form-control {
-  border: none;
-}
-
-.checkout-form .state-input {
-  width: 25%;
-}
-
-.checkout-form .state-input.placeholder .form-control {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.checkout-form .zip-input {
-  width: 25%;
-}
-
-.checkout-success .modal-header {
-  border-bottom: none;
-}
-
-.checkout-success .modal-header button.close:focus {
-  outline: none;
-}
-
-.checkout-success .modal-body {
-  padding-top: 0px;
-  padding-bottom: 60px;
-}
-
-.payment-note {
-  margin-top: 15px;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: .8rem;
-}
-
-.payment-note .fa-lock {
-  margin-right: 5px;
-}
-
-@media all and (min-width: 480px) {
-  .checkout-form-container form {
-    margin: 0 auto;
-    max-width: 480px;
-  }
+.article {
+  margin-top: 50px;
 }
 
 @media all and (hover: hover) {
-  .nav-link:hover > .cart-icon-container .cart-icon {
-    stroke: rgba(0, 0, 0, 0.9);
-  }
-
   .item:hover {
     color: black;
     text-decoration: none;

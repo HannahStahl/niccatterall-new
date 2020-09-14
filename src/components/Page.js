@@ -10,7 +10,7 @@ export default ({ pageKey, items }) => {
         <div className="banner-text"><h1>{title}</h1></div>
       </div>
       <div className="content">
-        <div className="intro">{intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+        <p className="intro">{intro}</p>
         <div className="items">
           {items.map((item) => (
             <a
