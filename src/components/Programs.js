@@ -10,18 +10,20 @@ export default ({ items }) => (
     {getPrograms(items).map((program) => (
       <a
         key={program.itemId}
-        href={program.itemLink}
+        href={program.itemLink.startsWith('http') ? program.itemLink : `https://${program.itemLink}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="item"
+        className="item program-preview-container"
       >
-        <img
-          src={`${config.cloudfrontURL}/${program.itemPhotos[0].photoName}`}
-          alt={program.itemName}
-        />
-        <div className="blog-preview">
-          <h3>{program.itemName}</h3>
-          <p>{program.itemDescription}</p>
+        <div className="program-preview">
+          <img
+            src={`${config.cloudfrontURL}/${program.itemPhotos[0].photoName}`}
+            alt={program.itemName}
+          />
+          <div className="program-preview-text">
+            <h3>{`${program.itemName.trim()}: $${program.itemPrice}`}</h3>
+            <p>{program.itemDescription}</p>
+          </div>
         </div>
       </a>
     ))}

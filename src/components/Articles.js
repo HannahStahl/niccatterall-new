@@ -17,7 +17,7 @@ export default ({ items }) => (
       <a
         key={article.itemId}
         href={escape(`/blog/${article.itemName.replace(/ /g, '_').toLowerCase()}`)}
-        className="item"
+        className="item blog-preview-container"
       >
         <img
           src={`${config.cloudfrontURL}/${article.itemPhotos[0].photoName}`}
