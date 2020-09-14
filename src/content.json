@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Improve your golf performance through comprehensive strength and conditioning training from Nic Catterall.",
-    "photo": "https://d2vff3mk7ylu21.cloudfront.net/home-banner.jpg",
+    "photo": "home-banner.jpg",
     "style": {
       "height": "500px"
     },
@@ -12,7 +12,7 @@
   },
   "blog": {
     "title": "Blog Articles",
-    "photo": "https://d2vff3mk7ylu21.cloudfront.net/blog-banner.jpg",
+    "photo": "blog-banner.jpg",
     "style": {
       "backgroundPosition": "top right"
     },
@@ -22,33 +22,65 @@
   },
   "programs": {
     "title": "Training Programs",
-    "photo": "https://d2vff3mk7ylu21.cloudfront.net/programs-banner.jpg",
+    "photo": "programs-banner.jpg",
     "intro": [
       "Nic offers training programs designed for all levels of competency and exercise experience, which can be performed right at home. Advanced sport-specific coaching is available and personalized with monitoring and communication options at various levels. For more information and purchasing options, click on the links provided here."
     ]
   },
   "videos": {
     "title": "Instructional Videos",
-    "photo": "https://d2vff3mk7ylu21.cloudfront.net/videos-banner.jpg",
+    "photo": "videos-banner.jpg",
     "intro": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ]
   },
   "podcast": {
     "title": "Tour Golf Podcast",
-    "photo": "https://d2vff3mk7ylu21.cloudfront.net/podcast-flipped.jpg",
+    "photo": "podcast-flipped.jpg",
     "intro": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ]
   },
   "clients": {
     "title": "PGA Client Showcase",
-    "photo": "https://d2vff3mk7ylu21.cloudfront.net/clients-banner.jpg",
+    "photo": "clients-banner.jpg",
     "style": {
       "backgroundPosition": "bottom right"
     },
     "intro": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    "players": [
+      {
+        "firstName": "Dylan",
+        "lastName": "Frittelli",
+        "itemPhoto": "dylan-frittelli.png",
+        "itemLink": "https://www.pgatour.com/players/player.29970.dylan-frittelli.htmldylan"
+      },
+      {
+        "firstName": "Chris",
+        "lastName": "Kirk",
+        "itemPhoto": "chris-kirk.png",
+        "itemLink": "https://www.pgatour.com/players/player.30926.chris-kirk.html"
+      },
+      {
+        "firstName": "Luke",
+        "lastName": "List",
+        "itemPhoto": "luke-list.png",
+        "itemLink": "https://www.pgatour.com/players/player.27129.luke-list.html"
+      },
+      {
+        "firstName": "D.A.",
+        "lastName": "Points",
+        "itemPhoto": "da-points.png",
+        "itemLink": "https://www.pgatour.com/players/player.25240.d-a--points.html"
+      },
+      {
+        "firstName": "Cameron",
+        "lastName": "Smith",
+        "itemPhoto": "cameron-smith.png",
+        "itemLink": "https://www.pgatour.com/players/player.35891.cameron-smith.html"
+      }
     ]
   }
 }

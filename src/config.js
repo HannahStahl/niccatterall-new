@@ -27,6 +27,7 @@ export default {
   // Add common config values here
   cloudfrontURL: `${config.cloudfrontBaseURL}/${config.userID}`,
   publicCloudfrontURL: 'https://d17jmxltsx3ffm.cloudfront.net',
+  photosCloudfrontURL: 'https://d2vff3mk7ylu21.cloudfront.net',
   businessName: 'Nic Catterall',
   ...config,
 };

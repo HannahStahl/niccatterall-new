@@ -1,4 +1,5 @@
 import React from 'react';
+import config from '../config';
 import content from '../content.json';
 
 export default ({ pageKey, Items }) => {
@@ -18,7 +19,7 @@ export default ({ pageKey, Items }) => {
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.3),
             rgba(0, 0, 0, 0.1)
-          ), url(${photo})` : `url(${photo})`,
+          ), url(${config.photosCloudfrontURL}/${photo})` : `url(${config.photosCloudfrontURL}/${photo})`,
           ...(style || {}),
         }}
       >

@@ -13,6 +13,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Articles from './components/Articles';
 import Programs from './components/Programs';
+import Clients from './components/Clients';
 import config from './config';
 
 const Routes = ({ items }) => (
@@ -23,7 +24,7 @@ const Routes = ({ items }) => (
     <Route path="/programs" exact render={() => <Page pageKey="programs" Items={<Programs items={items} />} />} />
     <Route path="/videos" exact render={() => <Page pageKey="videos" Items={<Articles items={items} />} />} />
     <Route path="/podcast" exact render={() => <Page pageKey="podcast" Items={<Articles items={items} />} />} />
-    <Route path="/clients" exact render={() => <Page pageKey="clients" Items={<Articles items={items} />} />} />
+    <Route path="/clients" exact render={() => <Page pageKey="clients" Items={<Clients items={items} />} />} />
     <Route component={NotFound} />
   </Switch>
 );
