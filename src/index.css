@@ -82,6 +82,10 @@ code {
   text-shadow: -2px 2px black;
 }
 
+.banner-text h1 {
+  max-width: 800px;
+}
+
 .content {
   max-width: 1200px;
   margin-left: auto;

@@ -15,7 +15,20 @@ export default ({ pageKey, items }) => {
 
   return (
     <div>
-      <div className="banner" style={{ backgroundImage: `url(${photo})`, ...(style || {}) }}>
+      <div
+        className="banner"
+        style={{
+          backgroundImage: `linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.1)
+          ), url(${photo})`,
+          ...(style || {}),
+        }}
+      >
         <div className="banner-text"><h1>{title}</h1></div>
       </div>
       <div className="content">

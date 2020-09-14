@@ -1,9 +1,9 @@
 {
   "home": {
-    "title": "Nic Catterall Golf",
-    "photo": "https://d2vff3mk7ylu21.cloudfront.net/home.jpg",
+    "title": "Improve your golf performance through comprehensive strength and conditioning training from Nic Catterall.",
+    "photo": "https://d2vff3mk7ylu21.cloudfront.net/home-banner.jpg",
     "style": {
-      "backgroundPosition": "top right"
+      "height": "500px"
     },
     "intro": [
       "Nic Catterall is an Australian high-performance coach, specializing in Musculoskeletal Therapy and Strength & Conditioning for professional golfers on the PGA Tour in the U.S. With over five years of tour experience, plus 10 years of clinical and industry experience across multiple sporting codes, Nic takes a tailored approach to each athlete he works with.",
