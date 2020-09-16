@@ -210,6 +210,17 @@ hr {
   -webkit-background-clip: text;
 }
 
+.podcast-episode {
+  width: 100%;
+  max-width: 850px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+  border: solid 1px #ddd;
+  box-shadow: -5px 5px 5px 0px #ddd;
+}
+
 .footer {
   height: 80px;
   width: 100%;
