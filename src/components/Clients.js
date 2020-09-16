@@ -25,6 +25,7 @@ const Client = ({ client }) => (
 
 export default () => (
   <>
+    <hr />
     <h3 className="clients-header">Players currently working with Nic:</h3>
     <div className="items">
       {currentClients.map((client) => <Client key={client.itemLink} client={client} />)}
