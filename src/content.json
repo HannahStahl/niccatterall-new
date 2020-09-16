@@ -171,5 +171,32 @@
         "itemLink": "https://www.pgatour.com/players/player.26289.boo-weekley.html"
       }
     ]
-  }
+  },
+  "affiliates": [
+    {
+      "image": "whoop-logo.png",
+      "alt": "Whoop",
+      "href": "https://whoop.com"
+    },
+    {
+      "image": "nobull-logo.png",
+      "alt": "NOBULL",
+      "href": "https://nobullproject.com"
+    },
+    {
+      "image": "vuori-logo.png",
+      "alt": "vuori",
+      "href": "https://vuoriclothing.com"
+    },
+    {
+      "image": "chuckcookgolf-logo.png",
+      "alt": "Chuck Cook Golf",
+      "href": "https://chuckcookgolf.com"
+    },
+    {
+      "image": "scotthamilton-logo.png",
+      "alt": "Scott Hamilton Golf",
+      "href": "https://scotthamiltongolf.com"
+    }
+  ]
 }

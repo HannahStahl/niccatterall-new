@@ -66,14 +66,14 @@ code {
   padding-top: 50px;
   padding-bottom: 5%;
   min-height: 100%;
-  margin-bottom: -80px;
+  margin-bottom: -160px;
   background-color: white;
 }
 
 .page-content:after {
   content: "";
   display: block;
-  height: 80px;
+  height: 160px;
 }
 
 .banner {
@@ -331,7 +331,7 @@ hr {
 }
 
 .footer {
-  height: 80px;
+  height: 160px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -346,6 +346,19 @@ hr {
 
 .footer a {
   text-decoration: underline;
+}
+
+.affiliates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.affiliates img {
+  height: 30px;
+  margin: 10px;
 }
 
 .article {
@@ -377,6 +390,20 @@ hr {
 
   .home-page-preview-text {
     margin-top: 0px;
+  }
+}
+
+@media all and (max-width: 673px) {
+  .page-content {
+    margin-bottom: -210px;
+  }
+  
+  .page-content:after {
+    height: 210px;
+  }
+  
+  .footer {
+    height: 210px;
   }
 }
 
