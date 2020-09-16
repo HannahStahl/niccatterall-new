@@ -17,7 +17,7 @@ export default () => {
   }, []);
 
   return (
-    <div>
+    <div className="podcast-episodes">
       {episodeURLs.map((episodeURL) => (
         <iframe
           key={episodeURL}

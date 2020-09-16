@@ -8,6 +8,36 @@
     "intro": [
       "Nic Catterall is an Australian high-performance coach, specializing in Musculoskeletal Therapy and Strength & Conditioning for professional golfers on the PGA Tour in the U.S. With over five years of tour experience, plus 10 years of clinical and industry experience across multiple sporting codes, Nic takes a tailored approach to each athlete he works with.",
       "Nic believes in training athletes to be formidable to their core - not just in performance, but in life. By seeking out areas for improvement, enhancing exceptional qualities, and encouraging fluid adaptation, Nic helps his clients succeed in an ever-changing world. He encourages hard and smart work aimed at developing body, brain, and character."
+    ],
+    "previews": [
+      {
+        "title": "Blog Articles",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "photo": "blog-preview.jpg",
+        "href": "/blog",
+        "cta": "Read the blog"
+      },
+      {
+        "title": "Training Programs",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "photo": "programs-preview.jpg",
+        "href": "/programs",
+        "cta": "Shop training programs"
+      },
+      {
+        "title": "Tour Golf Podcast",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "photo": "podcast-preview.jpg",
+        "href": "/podcast",
+        "cta": "Listen to podcast"
+      },
+      {
+        "title": "PGA Client Showcase",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "photo": "clients-preview.png",
+        "href": "/clients",
+        "cta": "View client showcase"
+      }
     ]
   },
   "blog": {
@@ -17,7 +47,7 @@
       "backgroundPosition": "top right"
     },
     "intro": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "I created this blog out of remembrance for my late grandfather, a source of immense strength in my family, and late friend who exhibited the qualities of a loving bear. Their sudden passing, along with my grandfather's passion for writing, motivated me to seize the day and start sharing my knowledge about healthy living with others."
     ]
   },
   "programs": {
@@ -38,7 +68,7 @@
     "title": "Tour Golf Podcast",
     "photo": "podcast-flipped.jpg",
     "intro": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "This podcast series dives into all things high performance relating to professional golfers on the PGA Tour. Nic Catterall, a high performance coach specialising in Musculoskeletal Therapy and Strength and Conditioning for PGA Tour Golfers, takes you on a journey exploring the performance world of professional golf and PGA Tour life on the road.Nic discusses a range of topics with amazing practitioners on tour that relate to factors that impact on a professional golfers life, performance and career. Nic also dives into those operators background and how they came to be working at the highest level in professional golf."
     ]
   },
   "clients": {

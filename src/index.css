@@ -24,6 +24,10 @@ p {
   font-size: 1.2rem;
 }
 
+a {
+  font-size: 1.2rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -46,6 +50,16 @@ code {
 
 .nav-link {
   font-size: 1.2rem;
+}
+
+.navbar-light .navbar-toggler {
+  border-radius: 0px;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-light .navbar-toggler:active,
+.navbar-light .navbar-toggler:focus {
+  outline: none;
 }
 
 .page-content {
@@ -99,8 +113,14 @@ code {
 
 .intro {
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 50px auto 30px auto;
+}
+
+.padded-intro {
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 1px;
 }
 
 .items {
@@ -122,6 +142,64 @@ code {
 hr {
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+.home-page-previews {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-page-preview {
+  padding: 30px 50px;
+}
+
+.home-page-preview-content {
+  display: flex;
+  flex-wrap: true;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-page-preview.left-aligned {
+  background-color: #eee;
+}
+
+.home-page-preview.right-aligned {
+  background-color: white;
+}
+
+.home-page-preview img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  margin: 30px;
+}
+
+.home-page-preview-text {
+  margin: 30px;
+}
+
+.home-page-preview.left-aligned .home-page-preview-text,
+.home-page-preview.left-aligned .home-page-preview-text * {
+  text-align: left;
+}
+
+.home-page-preview.right-aligned .home-page-preview-text,
+.home-page-preview.right-aligned .home-page-preview-text * {
+  text-align: right;
+}
+
+.home-page-preview h2 {
+  margin-bottom: 15px;
+  font-weight: 300px;
+}
+
+.fa-arrow-right {
+  margin-left: 8px;
+  font-size: 1rem;
 }
 
 .clients-header {
@@ -210,12 +288,15 @@ hr {
   -webkit-background-clip: text;
 }
 
+.podcast-episodes {
+  margin-top: 30px;
+}
+
 .podcast-episode {
   width: 100%;
   max-width: 850px;
   height: 200px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
   border-radius: 0px;
   border: solid 1px #ddd;
   box-shadow: -5px 5px 5px 0px #ddd;
@@ -282,12 +363,50 @@ hr {
   }
 }
 
+@media all and (max-width: 900px) {
+  .home-page-preview-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 410px;
+  }
+
+  .home-page-preview.right-aligned .home-page-preview-text,
+  .home-page-preview.right-aligned .home-page-preview-text * {
+    text-align: left;
+  }
+
+  .home-page-preview-text {
+    margin-top: 0px;
+  }
+}
+
 @media all and (max-width: 661px) {
   h1 {
     font-size: 2rem;
   }
 
-  .program-preview-container {
-    width: 251px;
+  .program-preview-container,
+  .program-preview-container img,
+  .program-preview-text {
+    width: 300px;
+  }
+
+  .home-page-preview-content {
+    max-width: 300px;
+  }
+
+  .home-page-preview-content img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .home-page-preview-text {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .item {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }

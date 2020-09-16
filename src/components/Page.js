@@ -6,6 +6,7 @@ export default ({ pageKey, Items }) => {
   const {
     title, photo, style, intro,
   } = content[pageKey];
+  const homePage = window.location.pathname === '/';
 
   return (
     <div>
@@ -25,8 +26,10 @@ export default ({ pageKey, Items }) => {
       >
         <div className="banner-text"><h1>{title}</h1></div>
       </div>
-      <div className="content">
-        <div className="intro">{intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      <div className={homePage ? undefined : "content"}>
+        <div className={`intro ${homePage ? " padded-intro" : ""}`}>
+          {intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
         {Items}
       </div>
     </div>
