@@ -221,6 +221,34 @@ hr {
   box-shadow: -5px 5px 5px 0px #ddd;
 }
 
+.blog-post {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-post img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.blog-post h1 {
+  font-weight: 300;
+}
+
+.blog-post * {
+  text-align: left;
+  font-family: Roboto, sans-serif !important;
+}
+
+.blog-post p,span {
+  font-size: 1.2rem !important;
+}
+
+.blog-post strong {
+  font-weight: 400;
+}
+
 .footer {
   height: 80px;
   width: 100%;

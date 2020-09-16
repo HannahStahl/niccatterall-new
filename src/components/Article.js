@@ -15,16 +15,15 @@ export default ({ match, items }) => {
 
   return article ? (
     <div className="article">
-      <h1>{article.itemName}</h1>
-      <div className="items">
+      <div className="content">
         {article.itemPhotos.map((photo) => (
-          <div className="blog-preview-container" key={photo.photoName}>
+          <div className="blog-post" key={photo.photoName}>
             <img
               src={`${config.cloudfrontURL}/${photo.photoName}`}
               alt={article.itemName}
             />
-            <div className="blog-preview">
-              <h3>{article.itemName}</h3>
+            <div>
+              <h1>{article.itemName}</h1>
               <p>{moment(article.datePublished).format('MMMM D, YYYY')}</p>
               <div dangerouslySetInnerHTML={{ __html: article.itemHtml }} />
             </div>
