@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  --neon-green: #93ff9c;
+  letter-spacing: 1px;
 }
 
 html, body, #root {
@@ -9,7 +11,7 @@ html, body, #root {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -32,10 +34,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+* {
+  --neon-green: #93ff9c;
+}
+
+.btn {
+  border-radius: 0px;
+  background-color: var(--neon-green);
+  color: black;
+  padding: 22px 38px;
+  border: 1px solid var(--neon-green);
+  -webkit-transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
+  transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
+  -webkit-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  position: relative;
+}
+
+.btn span {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+.btn svg {
+  position: absolute;
+  width: 1.1em;
+  right: 0rem;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  will-change: right, opacity;
+}
+
+.banner .btn {
+  margin-top: 20px;
+}
+
+.show-on-hover {
+  width: 0px;
+  overflow: hidden;
+}
 
 .navbar {
-  background-color: white;
-  border-bottom: solid 1px #eee;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: solid 1px var(--neon-green);
 }
 
 .navbar-nav.ml-auto {
@@ -48,13 +96,27 @@ code {
   padding-right: 8px;
 }
 
-.nav-link {
+.navbar-light .navbar-nav .nav-link {
   font-size: 1.2rem;
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--neon-green);
+  font-weight: bold;
 }
 
 .navbar-light .navbar-toggler {
   border-radius: 0px;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: var(--neon-green);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navbar .fa-bars {
+  color: white;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .navbar-light .navbar-toggler:active,
@@ -63,7 +125,6 @@ code {
 }
 
 .page-content {
-  padding-top: 50px;
   padding-bottom: 5%;
   min-height: 100%;
   margin-bottom: -160px;
@@ -78,7 +139,8 @@ code {
 
 .banner {
   width: 100%;
-  height: 400px;
+  height: 460px;
+  padding-top: 50px;
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
@@ -86,6 +148,19 @@ code {
   background-attachment: fixed;
   background-position: center;
   margin-bottom: max(3%, 30px);
+}
+
+.home-banner {
+  height: 600px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.1)
+  ), url(https://d2vff3mk7ylu21.cloudfront.net/home-highres.jpg);
+  background-position: 50% -50px;
 }
 
 .banner-text {
@@ -116,11 +191,30 @@ code {
   margin: 50px auto 30px auto;
 }
 
-.padded-intro {
+.home-intro {
+  max-width: 1200px;
   padding-top: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
   padding-bottom: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-intro-section {
+  margin: 30px;
+  width: 300px;
+}
+
+.home-intro-section p {
+  text-align: center;
+}
+
+.home-intro-section img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border: solid 2px var(--neon-green);
 }
 
 .items {
@@ -145,64 +239,6 @@ hr {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.home-page-previews {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.home-page-preview {
-  padding: 30px 50px;
-}
-
-.home-page-preview-content {
-  display: flex;
-  flex-wrap: true;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.home-page-preview.left-aligned {
-  background-color: #eee;
-}
-
-.home-page-preview.right-aligned {
-  background-color: white;
-}
-
-.home-page-preview img {
-  width: 350px;
-  height: 300px;
-  object-fit: cover;
-  object-position: top;
-  margin: 30px;
-}
-
-.home-page-preview-text {
-  margin: 30px;
-}
-
-.home-page-preview.left-aligned .home-page-preview-text,
-.home-page-preview.left-aligned .home-page-preview-text * {
-  text-align: left;
-}
-
-.home-page-preview.right-aligned .home-page-preview-text,
-.home-page-preview.right-aligned .home-page-preview-text * {
-  text-align: right;
-}
-
-.home-page-preview h2 {
-  margin-bottom: 15px;
-  font-weight: 300px;
-}
-
-.fa-arrow-right {
-  margin-left: 8px;
-  font-size: 1rem;
 }
 
 .clients-header {
@@ -373,26 +409,39 @@ hr {
 }
 
 @media all and (hover: hover) {
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--neon-green);
+  }
+
   .item:hover {
     color: black;
     text-decoration: none;
   }
+
+  .btn:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid var(--neon-green);
+  }
+
+  .btn:hover span {
+    -webkit-transform: translate3d(-1rem, 0, 0);
+            transform: translate3d(-1rem, 0, 0);
+  }
+
+  .btn:hover svg {
+    opacity: 1;
+    right: -2rem;
+  }
 }
 
-@media all and (max-width: 900px) {
-  .home-page-preview-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 410px;
+@media all and (max-width: 991px) {
+  .navbar {
+    background-color: black;
   }
 
-  .home-page-preview.right-aligned .home-page-preview-text,
-  .home-page-preview.right-aligned .home-page-preview-text * {
-    text-align: left;
-  }
-
-  .home-page-preview-text {
-    margin-top: 0px;
+  .home-banner {
+    background-position: 50% 15px;
   }
 }
 
@@ -419,20 +468,6 @@ hr {
   .program-preview-container img,
   .program-preview-text {
     width: 300px;
-  }
-
-  .home-page-preview-content {
-    max-width: 300px;
-  }
-
-  .home-page-preview-content img {
-    width: 300px;
-    height: 250px;
-  }
-
-  .home-page-preview-text {
-    margin-left: 0px;
-    margin-right: 0px;
   }
 
   .item {

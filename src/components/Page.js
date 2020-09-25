@@ -1,10 +1,11 @@
 import React from 'react';
+import Button from './Button';
 import config from '../config';
 import content from '../content.json';
 
 export default ({ pageKey, Items }) => {
   const {
-    title, photo, style, intro,
+    title, photo, style, intro, cta
   } = content[pageKey];
   const homePage = window.location.pathname === '/';
 
@@ -24,7 +25,10 @@ export default ({ pageKey, Items }) => {
           ...(style || {}),
         }}
       >
-        <div className="banner-text"><h1>{title}</h1></div>
+        <div className="banner-text">
+          <h1>{title}</h1>
+          {cta && <Button {...cta} />}
+        </div>
       </div>
       <div className={homePage ? undefined : "content"}>
         <div className={`intro ${homePage ? " padded-intro" : ""}`}>

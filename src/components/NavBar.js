@@ -4,15 +4,17 @@ import Nav from 'react-bootstrap/Nav';
 
 const NavBar = () => (
   <Navbar collapseOnSelect expand="lg" fixed="top">
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Toggle aria-controls="responsive-navbar-nav">
+      <i className="fas fa-bars" />
+    </Navbar.Toggle>
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto" activeKey={window.location.pathname}>
         {[
-          { href: '/', label: 'Home' },
-          { href: '/blog', label: 'Blog' },
-          { href: '/programs', label: 'Programs' },
-          { href: '/podcast', label: 'Podcast' },
-          { href: '/clients', label: 'Clients' },
+          { href: '/', label: 'HOME' },
+          { href: '/blog', label: 'BLOG' },
+          { href: '/programs', label: 'PROGRAMS' },
+          { href: '/podcast', label: 'PODCAST' },
+          { href: '/clients', label: 'CLIENTS' },
         ].map(({ href, label }) => (
           <Nav.Link key={label} href={href}>{label}</Nav.Link>
         ))}

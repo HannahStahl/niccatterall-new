@@ -1,30 +1,28 @@
 import React from 'react';
-import config from '../config';
 import content from '../content.json';
+import Button from './Button';
+import config from '../config';
+
+const { title, intro, cta } = content.home;
 
 export default () => (
-  <div className="home-page-previews">
-    {content.home.previews.map(({
-      text, photo, title, href, cta,
-    }, index) => {
-      const mobile = window.innerWidth <= 900;
-      const leftAligned = index % 2 === 0;
-      return (
-        <div key={title} className={`home-page-preview ${leftAligned ? 'left-aligned' : 'right-aligned'}`}>
-          <div className="home-page-preview-content">
-            {(leftAligned || mobile) && <img src={`${config.photosCloudfrontURL}/${photo}`} alt={title} />}
-            <div className="home-page-preview-text">
-              <h2>{title}</h2>
-              <p>{text}</p>
-              <a href={href}>
-                {cta}
-                <i className="fas fa-arrow-right" />
-              </a>
-            </div>
-            {!leftAligned && !mobile && <img src={`${config.photosCloudfrontURL}/${photo}`} alt={title} />}
+  <div>
+    <div className="banner home-banner">
+      <div className="banner-text">
+        <h1>{title}</h1>
+        <Button text={cta.text} href={cta.href} />
+      </div>
+    </div>
+    <div>
+      <div className="intro home-intro">
+        {intro.map(({ image, header, text }) => (
+          <div key={header} className="home-intro-section">
+            <img src={`${config.photosCloudfrontURL}/${image}`} alt={header} />
+            <h3>{header}</h3>
+            <p>{text}</p>
           </div>
-        </div>
-      );
-    })}
+        ))}
+      </div>
+    </div>
   </div>
 );
