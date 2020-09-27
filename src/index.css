@@ -148,6 +148,7 @@ code {
   background-attachment: fixed;
   background-position: center;
   margin-bottom: max(3%, 30px);
+  border-bottom: solid 1px var(--neon-green);
 }
 
 .home-banner {
@@ -217,6 +218,64 @@ code {
   border: solid 2px var(--neon-green);
 }
 
+.home-programs-preview {
+  min-height: 600px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ), url(https://d2vff3mk7ylu21.cloudfront.net/home-programs-preview.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-programs-text {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.home-programs-header {
+  color: white;
+  text-shadow: -2px 2px black;
+}
+
+.home-programs-text .program-preview {
+  background-color: white;
+}
+
+.home-programs-text .program-preview-container {
+  box-shadow: none;
+}
+
+.home-programs-text .btn {
+  margin-top: 20px;
+}
+
+.home-blog-preview {
+  margin-top: 80px;
+}
+
+.home-blog-preview-header {
+  text-shadow: -2px 2px #ddd;
+  margin-bottom: 20px;
+}
+
+.home-blog-preview .items {
+  margin-bottom: 30px;
+}
+
 .items {
   display: flex;
   flex-wrap: wrap;
@@ -226,8 +285,7 @@ code {
 
 .item {
   margin: 30px;
-  border: solid 1px #ddd;
-  border-left: none;
+  border: solid 1px var(--neon-green);
   box-shadow: -5px 5px 5px 0px #ddd;
   color: black;
   min-width: 251px;
@@ -337,7 +395,7 @@ hr {
   height: 200px;
   margin-top: 30px;
   border-radius: 0px;
-  border: solid 1px #ddd;
+  border: solid 1px var(--neon-green);
   box-shadow: -5px 5px 5px 0px #ddd;
 }
 
@@ -432,6 +490,10 @@ hr {
   .btn:hover svg {
     opacity: 1;
     right: -2rem;
+  }
+
+  .btn:focus {
+    box-shadow: none;
   }
 }
 

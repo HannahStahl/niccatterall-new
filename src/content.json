@@ -21,36 +21,6 @@
         "header": "SPORTS SCIENCE",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
       }
-    ],
-    "previews": [
-      {
-        "title": "BLOG ARTICLES",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "photo": "blog-preview.jpg",
-        "href": "/blog",
-        "cta": "Read the blog"
-      },
-      {
-        "title": "TRAINING PROGRAMS",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "photo": "programs-preview.jpg",
-        "href": "/programs",
-        "cta": "Shop training programs"
-      },
-      {
-        "title": "TOUR GOLF PODCAST",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "photo": "podcast-preview.jpg",
-        "href": "/podcast",
-        "cta": "Listen to podcast"
-      },
-      {
-        "title": "PGA CLIENT SHOWCASE",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "photo": "clients-preview.png",
-        "href": "/clients",
-        "cta": "View client showcase"
-      }
     ]
   },
   "blog": {
