@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import moment from 'moment';
 import config from '../config';
 
@@ -14,21 +15,22 @@ const getArticles = (items) => {
 export default ({ items }) => (
   <div className="items">
     {getArticles(items).map((article) => (
-      <a
-        key={article.itemId}
-        href={escape(`/blog/${article.itemName.replace(/ /g, '_').toLowerCase()}`)}
-        className="item blog-preview-container"
-      >
-        <img
-          src={`${config.cloudfrontURL}/${article.itemPhotos[0].photoName}`}
-          alt={article.itemName}
-        />
-        <div className="blog-preview">
-          <h3>{article.itemName}</h3>
-          <p>{moment(article.datePublished).format('MMMM D, YYYY')}</p>
-          <div dangerouslySetInnerHTML={{ __html: article.itemHtml }} />
-        </div>
-      </a>
+      <Fade key={article.itemId}>
+        <a
+          href={escape(`/blog/${article.itemName.replace(/ /g, '_').toLowerCase()}`)}
+          className="item blog-preview-container"
+        >
+          <img
+            src={`${config.cloudfrontURL}/${article.itemPhotos[0].photoName}`}
+            alt={article.itemName}
+          />
+          <div className="blog-preview">
+            <h3>{article.itemName}</h3>
+            <p>{moment(article.datePublished).format('MMMM D, YYYY')}</p>
+            <div dangerouslySetInnerHTML={{ __html: article.itemHtml }} />
+          </div>
+        </a>
+      </Fade>
     ))}
   </div>
 );

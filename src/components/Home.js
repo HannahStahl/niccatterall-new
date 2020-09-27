@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import moment from 'moment';
 import content from '../content.json';
 import Button from './Button';
@@ -33,64 +34,71 @@ export default ({ items }) => {
         </div>
       </div>
       <div className="intro home-intro">
-        {intro.map(({ image, header, text }) => (
-          <div key={header} className="home-intro-section">
-            <img src={`${config.photosCloudfrontURL}/${image}`} alt={header} />
-            <h3>{header}</h3>
-            <p>{text}</p>
-          </div>
-        ))}
+        <div className="home-intro-sections">
+          {intro.map(({ image, header, text }) => (
+            <Fade>
+              <div key={header} className="home-intro-section">
+                <img src={`${config.photosCloudfrontURL}/${image}`} alt={header} />
+                <h3>{header}</h3>
+                <p>{text}</p>
+              </div>
+            </Fade>
+          ))}
+        </div>
         <Button text="LEARN MORE" href="/about" />
       </div>
       <div className="home-programs-preview">
-        <div className="home-programs-text">
-          <h3 className="home-programs-header">TRAINING PROGRAMS</h3>
-          <div className="items">
-            {firstProgram && (
-              <a
-                href={firstProgram.itemLink.startsWith('http') ? firstProgram.itemLink : `https://${firstProgram.itemLink}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="item program-preview-container"
-              >
-                <div className="program-preview">
-                  <img
-                    src={`${config.cloudfrontURL}/${firstProgram.itemPhotos[0].photoName}`}
-                    alt={firstProgram.itemName}
-                  />
-                  <div className="program-preview-text">
-                    <h3>{`${firstProgram.itemName.trim()}: $${firstProgram.itemPrice}`}</h3>
-                    <p>{firstProgram.itemDescription}</p>
+        <Fade>
+          <div className="home-programs-text">
+            <h3 className="home-programs-header">TRAINING PROGRAMS</h3>
+            <div className="items">
+              {firstProgram && (
+                <a
+                  href={firstProgram.itemLink.startsWith('http') ? firstProgram.itemLink : `https://${firstProgram.itemLink}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="item program-preview-container"
+                >
+                  <div className="program-preview">
+                    <img
+                      src={`${config.cloudfrontURL}/${firstProgram.itemPhotos[0].photoName}`}
+                      alt={firstProgram.itemName}
+                    />
+                    <div className="program-preview-text">
+                      <h3>{`${firstProgram.itemName.trim()}: $${firstProgram.itemPrice}`}</h3>
+                      <p>{firstProgram.itemDescription}</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            )}
+                </a>
+              )}
+            </div>
+            <Button text="VIEW ALL PROGRAMS" href="/programs" />
           </div>
-          <Button text="VIEW ALL PROGRAMS" href="/programs" />
-        </div>
+        </Fade>
       </div>
       <div className="home-blog-preview">
         <h3 className="home-blog-preview-header">LATEST BLOG POSTS</h3>
         <div className="items">
           {firstThreeArticles.map((article) => (
-            <a
-              key={article.itemId}
-              href={escape(`/blog/${article.itemName.replace(/ /g, '_').toLowerCase()}`)}
-              className="item blog-preview-container"
-            >
-              <img
-                src={`${config.cloudfrontURL}/${article.itemPhotos[0].photoName}`}
-                alt={article.itemName}
-              />
-              <div className="blog-preview">
-                <h3>{article.itemName}</h3>
-                <p>{moment(article.datePublished).format('MMMM D, YYYY')}</p>
-                <div dangerouslySetInnerHTML={{ __html: article.itemHtml }} />
-              </div>
-            </a>
+            <Fade key={article.itemId}>
+              <a
+                href={escape(`/blog/${article.itemName.replace(/ /g, '_').toLowerCase()}`)}
+                className="item blog-preview-container"
+              >
+                <img
+                  src={`${config.cloudfrontURL}/${article.itemPhotos[0].photoName}`}
+                  alt={article.itemName}
+                />
+                <div className="blog-preview">
+                  <h3>{article.itemName}</h3>
+                  <p>{moment(article.datePublished).format('MMMM D, YYYY')}</p>
+                  <div dangerouslySetInnerHTML={{ __html: article.itemHtml }} />
+                </div>
+              </a>
+            </Fade>
           ))}
         </div>
-        <Button text="VIEW ALL POSTS" href="/blog" />
+        <Fade><Button text="VIEW ALL POSTS" href="/blog" /></Fade>
       </div>
     </div>
   );

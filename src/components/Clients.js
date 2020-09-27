@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import config from '../config';
 import content from '../content.json';
 
@@ -12,15 +13,17 @@ const currentClients = clients.filter((client) => client.active);
 const pastClients = clients.filter((client) => !client.active);
 
 const Client = ({ client }) => (
-  <a
-    href={client.itemLink.startsWith('http') ? client.itemLink : `https://${client.itemLink}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="item client-preview-container"
-  >
-    <img src={`${config.photosCloudfrontURL}/clients/${client.itemPhoto}`} alt={client.itemName} />
-    <h4>{`${client.firstName} ${client.lastName}`}</h4>
-  </a>
+  <Fade>
+    <a
+      href={client.itemLink.startsWith('http') ? client.itemLink : `https://${client.itemLink}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="item client-preview-container"
+    >
+      <img src={`${config.photosCloudfrontURL}/clients/${client.itemPhoto}`} alt={client.itemName} />
+      <h4>{`${client.firstName} ${client.lastName}`}</h4>
+    </a>
+  </Fade>
 );
 
 export default () => (

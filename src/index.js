@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter, withRouter, Route, Switch,
@@ -56,9 +57,9 @@ const App = withRouter(() => {
   return (
     <>
       <NavBar />
-      <div className="page-content">
+      <Fade className="page-content">
         <Routes items={items} />
-      </div>
+      </Fade>
       <Footer />
     </>
   );

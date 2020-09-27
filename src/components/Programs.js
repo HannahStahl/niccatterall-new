@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import config from '../config';
 
 const getPrograms = (items) => (
@@ -8,24 +9,25 @@ const getPrograms = (items) => (
 export default ({ items }) => (
   <div className="items">
     {getPrograms(items).map((program) => (
-      <a
-        key={program.itemId}
-        href={program.itemLink.startsWith('http') ? program.itemLink : `https://${program.itemLink}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="item program-preview-container"
-      >
-        <div className="program-preview">
-          <img
-            src={`${config.cloudfrontURL}/${program.itemPhotos[0].photoName}`}
-            alt={program.itemName}
-          />
-          <div className="program-preview-text">
-            <h3>{`${program.itemName.trim()}: $${program.itemPrice}`}</h3>
-            <p>{program.itemDescription}</p>
+      <Fade key={program.itemId}>
+        <a
+          href={program.itemLink.startsWith('http') ? program.itemLink : `https://${program.itemLink}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="item program-preview-container"
+        >
+          <div className="program-preview">
+            <img
+              src={`${config.cloudfrontURL}/${program.itemPhotos[0].photoName}`}
+              alt={program.itemName}
+            />
+            <div className="program-preview-text">
+              <h3>{`${program.itemName.trim()}: $${program.itemPrice}`}</h3>
+              <p>{program.itemDescription}</p>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </Fade>
     ))}
   </div>
 );

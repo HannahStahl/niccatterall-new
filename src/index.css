@@ -195,13 +195,12 @@ code {
   max-width: 1200px;
   padding-top: 10px;
   padding-bottom: 1px;
+}
+
+.home-intro-sections {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.home-intro .btn {
-  margin-bottom: 50px;
 }
 
 .home-intro-section {
@@ -219,6 +218,10 @@ code {
   object-fit: cover;
   margin-bottom: 30px;
   border: solid 2px var(--neon-green);
+}
+
+.home-intro .btn {
+  margin-bottom: 50px;
 }
 
 .home-programs-preview {
@@ -289,6 +292,7 @@ code {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .item {
@@ -400,6 +404,7 @@ hr {
 
 .podcast-episodes {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .podcast-episode {
