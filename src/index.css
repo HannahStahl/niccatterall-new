@@ -148,7 +148,6 @@ code {
   background-attachment: fixed;
   background-position: center;
   margin-bottom: max(3%, 30px);
-  border-bottom: solid 1px var(--neon-green);
 }
 
 .home-banner {
@@ -332,7 +331,12 @@ hr {
 }
 
 .item h3,h4 {
-  font-weight: 300;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.item h3 {
+  font-size: 1.6rem;
 }
 
 .item img {
