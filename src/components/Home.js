@@ -40,6 +40,7 @@ export default ({ items }) => {
             <p>{text}</p>
           </div>
         ))}
+        <Button text="LEARN MORE" href="/about" />
       </div>
       <div className="home-programs-preview">
         <div className="home-programs-text">

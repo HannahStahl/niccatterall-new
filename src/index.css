@@ -201,6 +201,10 @@ code {
   justify-content: center;
 }
 
+.home-intro .btn {
+  margin-bottom: 50px;
+}
+
 .home-intro-section {
   margin: 30px;
   width: 300px;

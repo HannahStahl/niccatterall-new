@@ -11,6 +11,7 @@ const NavBar = () => (
       <Nav className="mr-auto" activeKey={window.location.pathname}>
         {[
           { href: '/', label: 'HOME' },
+          { href: '/about', label: 'ABOUT' },
           { href: '/blog', label: 'BLOG' },
           { href: '/programs', label: 'PROGRAMS' },
           { href: '/podcast', label: 'PODCAST' },

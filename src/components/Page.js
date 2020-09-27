@@ -34,7 +34,7 @@ export default ({ pageKey, Items }) => {
         <div className={`intro ${homePage ? " padded-intro" : ""}`}>
           {intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
-        {Items}
+        {Items || <></>}
       </div>
     </div>
   );
