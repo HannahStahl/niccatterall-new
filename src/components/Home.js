@@ -32,6 +32,17 @@ export default ({ items }) => {
           <h1>{title}</h1>
           <Button text={cta.text} href={cta.href} />
         </div>
+        <div className="down-arrow">
+          <Fade>
+            <img
+              src="down-arrow.png"
+              alt="Down"
+              onClick={() => {
+                window.scroll({ top: window.innerHeight, behavior: 'smooth' });
+              }}
+            />
+          </Fade>
+        </div>
       </div>
       <div className="intro home-intro">
         <div className="home-intro-sections">
