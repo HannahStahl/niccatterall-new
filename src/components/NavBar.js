@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 const NavBar = () => (
-  <Navbar collapseOnSelect expand="lg" fixed="top">
+  <Navbar collapseOnSelect expand="lg" fixed="top" className={window.location.pathname.includes('blog/') ? ' white-background' : ''}>
     <Navbar.Toggle aria-controls="responsive-navbar-nav">
       <i className="fas fa-bars" />
     </Navbar.Toggle>

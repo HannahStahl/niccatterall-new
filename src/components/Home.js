@@ -33,15 +33,14 @@ export default ({ items }) => {
           <Button text={cta.text} href={cta.href} />
         </div>
         <div className="down-arrow">
-          <Fade>
-            <img
-              src="down-arrow.png"
-              alt="Down"
-              onClick={() => {
-                window.scroll({ top: window.innerHeight, behavior: 'smooth' });
-              }}
-            />
-          </Fade>
+          <img
+            src="down-arrow.png"
+            alt="Down"
+            onClick={() => {
+              window.scroll({ top: window.innerHeight, behavior: 'smooth' });
+            }}
+            className="fade-in"
+          />
         </div>
       </div>
       <div className="intro home-intro">

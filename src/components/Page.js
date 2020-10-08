@@ -5,23 +5,22 @@ import content from '../content.json';
 
 export default ({ pageKey, Items }) => {
   const {
-    title, photo, style, intro, cta
+    title, photo, style, intro, cta,
   } = content[pageKey];
-  const homePage = window.location.pathname === '/';
 
   return (
     <div>
       <div
         className="banner"
         style={{
-          backgroundImage: window.location.pathname === '/' ? `linear-gradient(
+          backgroundImage: `linear-gradient(
             to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8),
             rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.1)
-          ), url(${config.photosCloudfrontURL}/${photo})` : `url(${config.photosCloudfrontURL}/${photo})`,
+            rgba(0, 0, 0, 0.4)
+          ), url(${config.photosCloudfrontURL}/${photo})`,
           ...(style || {}),
         }}
       >
@@ -30,8 +29,8 @@ export default ({ pageKey, Items }) => {
           {cta && <Button {...cta} />}
         </div>
       </div>
-      <div className={homePage ? undefined : "content"}>
-        <div className={`intro ${homePage ? " padded-intro" : ""}`}>
+      <div className="content fade-in">
+        <div className="intro">
           {intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
         {Items || <></>}

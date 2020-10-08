@@ -3,7 +3,7 @@ import config from '../config';
 import content from '../content.json';
 
 const Footer = () => (
-  <div className="footer">
+  <div className="footer white-background">
     <div className="affiliates">
       {content.affiliates.map(({ image, alt, href }) => (
         <a key={alt} href={href} target="_blank" rel="noopener noreferrer">

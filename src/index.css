@@ -1,7 +1,7 @@
 * {
   margin: 0;
   --neon-green: #93ff9c;
-  letter-spacing: 1px;
+  --dark-gray: rgb(20, 20, 20);
 }
 
 html, body, #root {
@@ -15,6 +15,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: var(--dark-gray);
+  color: white;
 }
 
 h1 {
@@ -30,6 +32,20 @@ a {
   font-size: 1.2rem;
 }
 
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out 1s both;
+}
+
+.white-background {
+  background-color: white;
+  color: black;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -39,6 +55,7 @@ code {
 }
 
 .btn {
+  letter-spacing: 1px;
   border-radius: 0px;
   background-color: var(--neon-green);
   color: black;
@@ -99,6 +116,7 @@ code {
 .navbar-light .navbar-nav .nav-link {
   font-size: 1.2rem;
   color: white;
+  letter-spacing: 1px;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
@@ -113,7 +131,7 @@ code {
   margin-bottom: 5px;
 }
 
-.navbar .fa-bars {
+.navbar:not(.white-background) .fa-bars {
   color: white;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -124,17 +142,24 @@ code {
   outline: none;
 }
 
+.navbar.white-background {
+  background-color: white;
+}
+
+.navbar-light.white-background .navbar-nav .nav-link {
+  color: black;
+}
+
 .page-content {
   padding-bottom: 5%;
   min-height: 100%;
-  margin-bottom: -160px;
-  background-color: white;
+  margin-bottom: -200px;
 }
 
 .page-content:after {
   content: "";
   display: block;
-  height: 160px;
+  height: 200px;
 }
 
 .banner {
@@ -148,17 +173,18 @@ code {
   background-attachment: fixed;
   background-position: center;
   margin-bottom: max(3%, 30px);
+  animation: fadeIn 700ms ease-in-out 700ms both;
 }
 
 .home-banner {
   height: 100vh;
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.1)
+    rgba(0, 0, 0, 0.4)
   ), url(https://d2vff3mk7ylu21.cloudfront.net/home-highres.jpg);
   background-position: 50% 0px;
   position: relative;
@@ -204,6 +230,7 @@ code {
   margin-right: auto;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 30px;
 }
 
 .intro {
@@ -248,11 +275,11 @@ code {
   min-height: 600px;
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
   ), url(https://d2vff3mk7ylu21.cloudfront.net/home-programs-preview.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -292,10 +319,10 @@ code {
   margin-top: 80px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 50px;
 }
 
 .home-blog-preview-header {
-  text-shadow: -2px 2px #ddd;
   margin-bottom: 20px;
 }
 
@@ -316,9 +343,9 @@ code {
 }
 
 .item {
+  background-color: white;
   margin: 30px;
   border: solid 1px var(--neon-green);
-  box-shadow: -5px 5px 5px 0px #ddd;
   color: black;
   min-width: 251px;
   transition: top ease 0.3s;
@@ -351,10 +378,12 @@ hr {
 .client-preview-container {
   width: 300px;
   height: 320px;
+  background-color: transparent;
 }
 
 .client-preview-container h4 {
   margin-top: 20px;
+  color: white;
 }
 
 .item h3,h4 {
@@ -384,7 +413,8 @@ hr {
   width: 100%;
   height: 250px;
   object-position: top;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px var(--neon-green);
+  background-color: white;
 }
 
 .blog-preview {
@@ -437,7 +467,7 @@ hr {
   margin-top: 30px;
   border-radius: 0px;
   border: solid 1px var(--neon-green);
-  box-shadow: -5px 5px 5px 0px #ddd;
+  background-color: white;
 }
 
 .blog-post {
@@ -469,7 +499,7 @@ hr {
 }
 
 .footer {
-  height: 160px;
+  height: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -500,7 +530,10 @@ hr {
 }
 
 .article {
-  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: white;
+  color: black;
 }
 
 .not-found {
@@ -555,15 +588,15 @@ hr {
 
 @media all and (max-width: 673px) {
   .page-content {
-    margin-bottom: -210px;
+    margin-bottom: -250px;
   }
   
   .page-content:after {
-    height: 210px;
+    height: 250px;
   }
   
   .footer {
-    height: 210px;
+    height: 250px;
   }
 }
 
