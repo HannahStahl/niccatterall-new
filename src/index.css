@@ -235,6 +235,10 @@ code {
   margin: 50px auto 30px auto;
 }
 
+.content .intro p {
+  font-size: 1.5rem;
+}
+
 .home-intro {
   max-width: 1200px;
   padding-top: 10px;
