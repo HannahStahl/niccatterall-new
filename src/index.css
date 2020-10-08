@@ -50,9 +50,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-* {
-  --neon-green: #93ff9c;
-}
 
 .btn {
   letter-spacing: 1px;
