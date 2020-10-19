@@ -5,21 +5,21 @@ import content from '../content.json';
 
 export default ({ pageKey, Items }) => {
   const {
-    title, photo, style, intro, cta,
+    title, photo, style, className, intro, cta,
   } = content[pageKey];
 
   return (
     <div>
       <div
-        className="banner"
+        className={`banner${className ? ` ${className}` : ''}`}
         style={{
           backgroundImage: `linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.4)
+            to ${className === 'right-aligned' ? 'right' : 'left'},
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.6)
           ), url(${config.photosCloudfrontURL}/${photo})`,
           ...(style || {}),
         }}

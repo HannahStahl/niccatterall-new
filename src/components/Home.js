@@ -55,7 +55,6 @@ export default ({ items }) => {
             </Fade>
           ))}
         </div>
-        <Button text="LEARN MORE" href="/about" />
       </div>
       <div className="home-programs-preview">
         <Fade>

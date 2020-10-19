@@ -22,7 +22,6 @@ import config from './config';
 const Routes = ({ items }) => (
   <Switch>
     <Route path="/" exact render={() => <Home items={items} />} />
-    <Route path="/about" exact render={() => <Page pageKey="about" />} />
     <Route path="/blog" exact render={() => <Page pageKey="blog" Items={<Articles items={items} />} />} />
     <Route path="/blog/:blogTitle" exact render={(props) => <Article match={props.match} items={items} />} />
     <Route path="/programs" exact render={() => <Page pageKey="programs" Items={<Programs items={items} />} />} />

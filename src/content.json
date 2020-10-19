@@ -7,46 +7,36 @@
     },
     "intro": [
       {
-        "image": "musculoskeletal-therapy.jpg",
+        "image": "stock-massage.jpg",
         "header": "MUSCULOSKELETAL THERAPY",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
       },
       {
-        "image": "strength-and-conditioning.jpg",
+        "image": "stock-workout.jpg",
         "header": "STRENGTH AND CONDITIONING",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
-        "image": "sports-science.jpg",
+        "image": "stock-golf.jpg",
         "header": "SPORTS SCIENCE",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
       }
     ]
   },
-  "about": {
-    "title": "ABOUT NIC",
-    "photo": "about-banner.jpg",
-    "style": {
-      "backgroundPosition": "top right"
-    },
-    "intro": [
-      "Nic Catterall is an Australian high-performance coach, specializing in Musculoskeletal Therapy and Strength & Conditioning for professional golfers on the PGA Tour in the U.S. With over five years of tour experience, plus 10 years of clinical and industry experience across multiple sporting codes, Nic takes a tailored approach to each athlete he works with.",
-      "Nic believes in training athletes to be formidable to their core - not just in performance, but in life. By seeking out areas for improvement, enhancing exceptional qualities, and encouraging fluid adaptation, Nic helps his clients succeed in an ever-changing world. He encourages hard and smart work aimed at developing body, brain, and character."
-    ]
-  },
   "blog": {
     "title": "BLOG ARTICLES",
-    "photo": "blog-banner.jpg",
-    "style": {
-      "backgroundPosition": "top right"
-    },
+    "photo": "stock-weights.jpg",
     "intro": [
       "I created this blog out of remembrance for my late grandfather, a source of immense strength in my family, and late friend who exhibited the qualities of a loving bear. Their sudden passing, along with my grandfather's passion for writing, motivated me to seize the day and start sharing my knowledge about healthy living with others."
     ]
   },
   "programs": {
     "title": "TRAINING PROGRAMS",
-    "photo": "programs-banner.jpg",
+    "photo": "stock-workout3.jpg",
+    "style": {
+      "backgroundPosition": "top"
+    },
+    "className": "right-aligned",
     "intro": [
       "Nic offers training programs designed for all levels of competency and exercise experience, which can be performed right at home. Advanced sport-specific coaching is available and personalized with monitoring and communication options at various levels. For more information and purchasing options, click on the links provided here."
     ]
@@ -67,10 +57,11 @@
   },
   "clients": {
     "title": "PGA CLIENT SHOWCASE",
-    "photo": "clients-banner.jpg",
+    "photo": "stock-golf2.jpg",
     "style": {
-      "backgroundPosition": "bottom right"
+      "backgroundPosition": "top left"
     },
+    "className": "right-aligned",
     "intro": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ],
