@@ -166,9 +166,10 @@ code {
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
   margin-bottom: max(3%, 30px);
   animation: fadeIn 700ms ease-in-out 700ms both;
 }
@@ -286,10 +287,11 @@ code {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.7)
   ), url(https://d2vff3mk7ylu21.cloudfront.net/programs-banner.jpg);
-  background-position: center;
+  background-position: center !important;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-attachment: fixed !important;
 }
 
 .home-programs-text {
