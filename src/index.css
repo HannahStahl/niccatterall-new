@@ -246,6 +246,8 @@ code {
   max-width: 1200px;
   padding-top: 10px;
   padding-bottom: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .home-intro-sections {
@@ -256,7 +258,7 @@ code {
 
 .home-intro-section {
   margin: 30px;
-  width: 300px;
+  width: min(100%, 300px);
 }
 
 .home-intro-section p {
@@ -264,7 +266,7 @@ code {
 }
 
 .home-intro-section img {
-  width: 300px;
+  width: min(100%, 300px);
   height: 250px;
   object-fit: cover;
   margin-bottom: 30px;
@@ -377,7 +379,7 @@ hr {
 }
 
 .client-preview-container {
-  width: 300px;
+  width: min(100%, 300px);
   height: 320px;
   background-color: transparent;
 }
@@ -421,12 +423,8 @@ hr {
 .blog-preview {
   text-align: left;
   padding: 20px;
-  height: 240px;
+  height: 250px;
   overflow: hidden;
-  background-image: linear-gradient(rgb(33, 37, 41), rgb(33, 37, 41), rgb(33, 37, 41), white);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .program-preview {
@@ -437,23 +435,19 @@ hr {
 
 .blog-preview * {
   font-family: Roboto, sans-serif !important;
-  color: transparent !important;
-  background-color: transparent !important;
+  color: black !important;
+  background-color: white !important;
 }
 
-.blog-preview p, .program-preview p {
-  font-size: 1rem;
+.blog-preview p, .blog-preview span, .program-preview p {
+  font-size: 1rem !important;
 }
 
 .program-preview-text {
   padding: 20px;
   width: max(calc(100% - 251px), 251px);
-  height: 240px;
+  height: 250px;
   overflow: hidden;
-  background-image: linear-gradient(rgb(33, 37, 41), rgb(33, 37, 41), rgb(33, 37, 41), white);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .podcast-episodes {
@@ -609,7 +603,7 @@ hr {
   .program-preview-container,
   .program-preview-container img,
   .program-preview-text {
-    width: 300px;
+    width: min(100%, 300px);
   }
 
   .item {
