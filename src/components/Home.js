@@ -46,8 +46,8 @@ export default ({ items }) => {
       <div className="intro home-intro">
         <div className="home-intro-sections">
           {intro.map(({ image, header, text }) => (
-            <Fade>
-              <div key={header} className="home-intro-section">
+            <Fade key={header}>
+              <div className="home-intro-section">
                 <img src={`${config.photosCloudfrontURL}/${image}`} alt={header} />
                 <h3>{header}</h3>
                 <p>{text}</p>
