@@ -161,7 +161,7 @@ code {
 
 .banner {
   width: 100%;
-  height: 560px;
+  height: min(100vh, 560px);
   padding-top: 50px;
   display: flex;
   align-items: center;
