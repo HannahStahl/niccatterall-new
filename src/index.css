@@ -167,7 +167,6 @@ code {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   margin-bottom: max(3%, 30px);
   animation: fadeIn 700ms ease-in-out 700ms both;
@@ -289,7 +288,6 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .home-programs-text {
