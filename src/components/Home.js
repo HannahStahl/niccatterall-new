@@ -68,7 +68,19 @@ export default ({ items }) => {
           ))}
         </div>
       </div>
-      <div className="home-programs-preview">
+      <Parallax
+        bgImage={`${config.photosCloudfrontURL}/programs-banner.jpg`}
+        bgImageStyle={{
+          objectFit: 'cover',
+          width: '100vw',
+          height: '100%',
+          top: 250,
+          opacity: 0.4,
+        }}
+        bgImageAlt="Training Programs"
+        strength={500}
+        className="home-programs-preview"
+      >
         <Fade>
           <div className="home-programs-text">
             <h3 className="home-programs-header">TRAINING PROGRAMS</h3>
@@ -96,7 +108,7 @@ export default ({ items }) => {
             <Button text="VIEW ALL PROGRAMS" href="/programs" />
           </div>
         </Fade>
-      </div>
+      </Parallax>
       <div className="home-blog-preview">
         <h3 className="home-blog-preview-header">LATEST BLOG POSTS</h3>
         <div className="items">

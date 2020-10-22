@@ -288,16 +288,6 @@ code {
 
 .home-programs-preview {
   min-height: 600px;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.7)
-  ), url(https://d2vff3mk7ylu21.cloudfront.net/programs-banner.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .home-programs-text {
