@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  --accent-color: #34cdfc;
+  --accent-color: #7cc6dc;
   --dark-gray: rgb(20, 20, 20);
 }
 
@@ -159,6 +159,14 @@ code {
   height: 200px;
 }
 
+.react-parallax-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .banner {
   width: 100%;
   height: min(100vh, 560px);
@@ -174,8 +182,6 @@ code {
 
 .home-banner {
   height: 100vh;
-  background-image: url(https://d2vff3mk7ylu21.cloudfront.net/stock-workout2.jpg);
-  background-position: 50% 0px;
   position: relative;
 }
 
@@ -218,6 +224,10 @@ code {
 
 .home-banner .banner-text {
   text-align: center;
+}
+
+.home-banner .banner-text h1 {
+  margin-bottom: 25px;
 }
 
 .banner.right-aligned .banner-text {
@@ -573,10 +583,6 @@ hr {
   .navbar {
     background-color: black;
   }
-
-  .home-banner {
-    background-position: 50% 15px;
-  }
 }
 
 @media all and (max-width: 673px) {
@@ -607,5 +613,11 @@ hr {
   .item {
     margin-left: 0px;
     margin-right: 0px;
+  }
+}
+
+@media all and (max-height: 400px) {
+  h1 {
+    font-size: 2rem;
   }
 }

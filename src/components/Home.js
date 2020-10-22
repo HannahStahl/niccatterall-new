@@ -1,4 +1,5 @@
 import React from 'react';
+import { Parallax } from 'react-parallax';
 import Fade from 'react-reveal/Fade';
 import moment from 'moment';
 import content from '../content.json';
@@ -27,7 +28,18 @@ export default ({ items }) => {
   const firstThreeArticles = getFirstThreeArticles(items);
   return (
     <div>
-      <div className="banner home-banner">
+      <Parallax
+        bgImage={`${config.photosCloudfrontURL}/stock-workout2.jpg`}
+        bgImageStyle={{
+          objectFit: 'cover',
+          width: '100%',
+          height: '100vh',
+          top: 250,
+        }}
+        bgImageAlt="Nic Catterall Training"
+        strength={500}
+        className="home-banner"
+      >
         <div className="banner-text">
           <h1>{title}</h1>
           <Button text={cta.text} href={cta.href} />
@@ -42,7 +54,7 @@ export default ({ items }) => {
             className="fade-in"
           />
         </div>
-      </div>
+      </Parallax>
       <div className="intro home-intro">
         <div className="home-intro-sections">
           {intro.map(({ image, header, text }) => (
